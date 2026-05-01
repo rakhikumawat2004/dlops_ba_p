@@ -2,7 +2,9 @@ from src.cnnClassifier.constants import *
 from src.cnnClassifier.utils.common import read_yaml, create_directories
 from src.cnnClassifier.entity.config_entity import (
     DataIngestionConfig,
-    PrepareBaseModelConfig 
+    PrepareBaseModelConfig,
+    PrepareCallbacksConfig
+
 )
 from pathlib import Path
 import os
@@ -44,4 +46,11 @@ class ConfigurationManager:
             params_weights=params['WEIGHTS'],
             params_classes=params['CLASSES']
         )
+        
+        return PrepareCallbacksConfig(
+            root_dir=Path(config['root_dir']),
+            tensorboard_root_log_dir=Path(config['tensorboard_root_log_dir']),
+            checkpoint_model_filepath=Path(config['checkpoint_model_filepath'])
+        )
+    
     
