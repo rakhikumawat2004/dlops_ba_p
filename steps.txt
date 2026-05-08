@@ -163,4 +163,15 @@ Now we will see all logs in dvc.lock (git add dvc.lock 'artifacts\training\.giti
 Now open the terminal and write 
 
 dvc dag 
+-------------------------------------------------------
 
+
+Now in 'Pipeline' folder --> create file ---> 'predict.py' and write all code .
+
+Now create app.py file ---> write all code .
+
+In templates folder ---> index.html --> write code ..
+
+Now open the terminal and write python app.py 
+
+Now click on upload and select image and click on predict ---> It will return result . 
